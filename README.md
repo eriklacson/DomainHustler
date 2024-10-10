@@ -1,6 +1,6 @@
 # DomainHustler 🚀
 
-**DomainHustler** yet another lightwieght domain enumeration that hustles information about a domain. It uncovers DNS records, WHOIS data, and subdomains from certificate transparency logs. Made for network geeks, cybersecurity folks, or anyone curious about what's behind a domain.
+A lightwieght domain enumeration written in Python3 for hustling information from a domain. It uncovers DNS records, WHOIS data, and subdomains from certificate transparency logs. Made for network geeks, cybersecurity folks, or anyone curious about what's behind a domain.
 
 ## Features ✨
 - **DNS Resolution**: Automatically retrieves A, MX, and NS records for a domain.
@@ -12,13 +12,13 @@
 Ensure you have the required libraries installed:
 
 ```bash
-pip install dnspython whois requests
+pip install dnspython whois python-whis requests
 ```
 
 ## Usage
 
 ```bash
-python domain_enum.py example.com
+python3 DomainHustler.py example.com
 ```
 
 ## Example Output
