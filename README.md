@@ -43,7 +43,7 @@ www.example.com
 ```
 ## Contributions
 
-Feel free to fork this repository, submit issues, or suggest new features via pull requests! Let’s make domain recon as smooth as possible!
+Feel free to fork this repository, submit issues, or suggest new features via pull requests! 
 
 ## License 
 
