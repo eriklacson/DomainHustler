@@ -1,6 +1,6 @@
 # DomainHustler 🚀
 
-A lightweiht domain enumeration written in Python3 for hustling information from a domain. It uncovers DNS records, WHOIS data, and subdomains from certificate transparency logs. Made for network geeks, cybersecurity folks, or anyone curious about what's behind a domain.
+A lightweight tool written in Python3 for hustling information from a domain. It uncovers DNS records, WHOIS data, and subdomains from certificate transparency logs. Made for network geeks, cybersecurity folks, or anyone curious about what's behind a domain.
 
 ## Features ✨
 - **DNS Resolution**: Automatically retrieves A, MX, and NS records for a domain.
