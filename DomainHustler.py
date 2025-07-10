@@ -1,7 +1,16 @@
+#!/usr/bin/env python3
+
 import dns.resolver
 import whois
 import requests
 import argparse
+import logging
+
+# Configure logging
+logging.basicConfig(
+    filename='domain_hustler.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Function to resolve DNS records (A, MX, NS)
 def resolve_dns(domain):
@@ -12,13 +21,14 @@ def resolve_dns(domain):
         records['A'] = [str(rdata) for rdata in a_records]
     except Exception as e:
         records['A'] = f"Error resolving A records: {e}"
-
+        loggin.error(f"Error resolving A records for {domain}: {e}")
     try:
         # MX record
         mx_records = dns.resolver.resolve(domain, 'MX')
         records['MX'] = [str(rdata.exchange) for rdata in mx_records]
     except Exception as e:
         records['MX'] = f"Error resolving MX records: {e}"
+        logging.error(f"Error resolving MX records for {domain}: {e}")
 
     try:
         # NS record
@@ -28,6 +38,7 @@ def resolve_dns(domain):
         records['NS'] = f"Error resolving NS records: {e}"
 
     return records
+
 
 # Function to perform a WHOIS lookup
 def whois_lookup(domain):
