@@ -58,9 +58,3 @@ def test_get_subdomains_error(mocker):
     domain = 'example.com'
     subdomains = DomainHustler.get_subdomains(domain)
     assert "Error retrieving subdomains" in subdomains
-
-
-    mock_get.side_effect = Exception("Request failed")
-    domain = 'example.com'
-    subdomains = DomainHustler.get_subdomains(domain)
-    assert "Error retrieving subdomains" in subdomains
