@@ -1,5 +1,4 @@
 import pytest
-from pytest_mock import MockerFixture
 import DomainHustler
 
 def test_resolve_dns(mocker):
