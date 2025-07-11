@@ -12,7 +12,7 @@ DomainHustler is a lightweight Python 3 tool for hustling information from a dom
 Install the required dependencies using `pip`:
 
 ```bash
-pip install -r requirements.txt
+pip install dnspython python-whois requests
 ```
 
 ## Usage
