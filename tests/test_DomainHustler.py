@@ -2,7 +2,12 @@ import os
 import sys
 from unittest import mock
 import pytest
+
+TEST_DIR = os.path.dirname(__file__)
+STUB_PATH = os.path.join(TEST_DIR, "stubs")
+sys.path.insert(0, STUB_PATH)
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+
 import DomainHustler
 
 def test_resolve_dns():
