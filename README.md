@@ -12,7 +12,7 @@ A lightweight tool written in Python3 for hustling information from a domain. It
 Ensure you have the required libraries installed:
 
 ```bash
-pip install dnspython whois python-whis requests
+pip install dnspython whois python-whois requests
 ```
 
 ## Usage
