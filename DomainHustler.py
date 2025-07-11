@@ -53,7 +53,7 @@ def whois_lookup(domain):
 def get_subdomains(domain):
     url = f'https://crt.sh/?q={domain}&output=json'
     try:
-        response = requests.get(url)
+        response = requests.get(url, timeout=10)
         if response.status_code == 200:
             subdomains = set()
             certs = response.json()
