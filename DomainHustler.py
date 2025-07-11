@@ -21,7 +21,7 @@ def resolve_dns(domain):
         records['A'] = [str(rdata) for rdata in a_records]
     except Exception as e:
         records['A'] = f"Error resolving A records: {e}"
-        loggin.error(f"Error resolving A records for {domain}: {e}")
+        logging.error(f"Error resolving A records for {domain}: {e}")
     try:
         # MX record
         mx_records = dns.resolver.resolve(domain, 'MX')
@@ -36,6 +36,7 @@ def resolve_dns(domain):
         records['NS'] = [str(rdata.target) for rdata in ns_records]
     except Exception as e:
         records['NS'] = f"Error resolving NS records: {e}"
+        logging.error(f"Error resolving NS records for {domain}: {e}")
 
     return records
 
